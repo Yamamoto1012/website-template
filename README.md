@@ -1,37 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website Template for Next.js
 
-## Getting Started
+Next.js 15（App Router）と TypeScript をベースに、Tailwind CSS と shadcn/ui を組み合わせたすぐに使えるウェブサイトテンプレートです。
 
-First, run the development server:
+## 主な特徴
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+* **Next.js 15（App Router）** で高速なページ遷移
+* **TypeScript** による型安全な開発
+* **Tailwind CSS + shadcn/ui** で柔軟かつ再利用可能な UI
+* **pnpm** で高速かつ軽量な依存管理
+* **Storybook** でコンポーネントを視覚的に確認
+* **GSAP** アニメーションで動きに表情をプラス
+* **Biome** による自動フォーマットと静的解析
+* **Husky** でコミット前にコード品質チェック
+
+## 開発環境の準備
+
+1. Node.js（18.17.0 以上）と pnpm（8.0.0 以上）をインストール
+2. リポジトリをクローンして移動：
+
+   ```bash
+   git clone [repository-url]
+   cd website-template-next
+   ```
+3. 依存パッケージをインストール：
+
+   ```bash
+   pnpm install
+   ```
+4. 開発サーバーを起動：
+
+   ```bash
+   pnpm dev
+   ```
+
+## 使えるコマンド
+
+| コマンド             | 説明                  |
+| ---------------- | ------------------- |
+| `pnpm dev`       | 開発サーバー起動（Turbopack） |
+| `pnpm build`     | プロダクションビルド          |
+| `pnpm start`     | 本番サーバー起動            |
+| `pnpm lint`      | 静的解析                |
+| `pnpm format`    | コードフォーマット           |
+| `pnpm storybook` | Storybook 起動        |
+
+## プロジェクト構成
+
+```
+├── app/           // Next.js App Router
+├── components/    // 共通コンポーネント
+├── lib/           // ヘルパー関数など
+├── public/        // 画像やフォントなどの静的ファイル
+└── .storybook/    // Storybook の設定
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## スタイリングとアニメーション
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Tailwind CSS** によるユーティリティファーストなスタイル
+* **shadcn/ui** で一貫性のある UI コンポーネント
+* **GSAP** を使ったリッチなアニメーション
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## コード品質
 
-## Learn More
+* **Biome** で自動フォーマット＆Lint
+* **Husky** でコミット前に品質チェック
+* **TypeScript** で安心の型検査
 
-To learn more about Next.js, take a look at the following resources:
+## ドキュメント
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# website-template
+* Next.js: [https://nextjs.org/docs](https://nextjs.org/docs)
+* Tailwind CSS: [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+* shadcn/ui: [https://ui.shadcn.com](https://ui.shadcn.com)
+* GSAP: [https://greensock.com/docs](https://greensock.com/docs)
