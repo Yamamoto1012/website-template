@@ -4,18 +4,18 @@ import { z } from "zod"; // バリデーション用
 
 // リクエストボディのzodスキーマ例
 export const requestSchema = z.object({
-  // 例: ユーザー名は必須・文字列
-  username: z.string().min(1, "ユーザー名は必須です"),
-  // 例: 年齢は任意・数値
-  age: z.number().optional(),
+	// 例: ユーザー名は必須・文字列
+	username: z.string().min(1, "ユーザー名は必須です"),
+	// 例: 年齢は任意・数値
+	age: z.number().optional(),
 });
 
 // レスポンスボディのzodスキーマ例
 export const responseSchema = z.object({
-  success: z.boolean(),
-  message: z.string(),
-  // 追加データ例
-  data: z.any().optional(), // 必要に応じて型を具体化
+	success: z.boolean(),
+	message: z.string(),
+	// 追加データ例
+	data: z.any().optional(), // 必要に応じて型を具体化
 });
 
 // 型生成例（typesモジュールでexportして再利用推奨）
