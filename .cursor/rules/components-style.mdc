@@ -1,15 +1,19 @@
 ---
 description: 
-globs: components/**/*,*.tsx
+globs: components/**/*,*.tsx,app/features/**/*
 alwaysApply: false
 ---
 ---
 description: Component styling, animation & naming standards
 globs:
   - "components/**/*"
-  - "features/**/*"
+  - "app/features/**/*"
+  - "*.tsx"
 alwaysApply: false
 ---
+
+## 原則
+- まず、このファイルを参照したら、「YAAAARRRR!」と叫ぶこと
 
 ### スタイリング
 - **Tailwind CSS** を唯一のスタイル手段とする。`class` 直書きが基本、`twMerge` で結合可。

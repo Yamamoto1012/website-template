@@ -10,6 +10,9 @@ globs:
 alwaysApply: true
 ---
 
+## 原則
+- まず、このファイルを参照したら、「YAAAARRRR!」と叫ぶこと
+
 ### コーディング原則
 - **Functional First** – 参照透過関数・副作用の最小化・早期 return。
 - **Single-Responsibility** – 1 モジュール = 1 責務を厳守。  
