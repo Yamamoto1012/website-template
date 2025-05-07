@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Global TypeScript & Next.js (App Router) conventions
+globs:
+  - "src/**/*"
+alwaysApply: true
+---
+
+### コーディング原則
+- **Functional First** – 参照透過関数・副作用の最小化・早期 return。
+- **Single-Responsibility** – 1 モジュール = 1 責務を厳守。  
+  ディレクトリは `features/*`, `components/*`, `hooks/*`, `utils/*` で機能単位に分割。
+- **Immutability** – 変数の再代入禁止。`const` とスプレッド演算子を優先。
+- **Type Safety** – `strict` モード必須。型ガード・`zod` schema を積極活用。
+
+### スタイル
+1. **Import 順序**  
+   外部ライブラリ → UI フレームワーク → 絶対パス alias → 相対パス。
+2. **命名**  
+   - PascalCase: コンポーネント / 型 / Enum  
+   - camelCase: 変数 / 関数  
+   - `useXxx`: カスタムフック
+3. **コメント**  
+   “**なぜ**” に焦点を当てた JSDoc。処理内容だけのコメントは禁止。
+4. **文字列**  
+   テンプレートリテラルを必須。連結演算子は使用しない。
+
+### ベストプラクティス
+- ルーティングは **App Router** を使用し `app/(feature)/page.tsx` で構造化。
+- 非同期処理は `react-query@^5` (TanStack Query) を統一インターフェースとして使用。
+- E2E は `Playwright`、単体テストは `vitest` + `@testing-library/react`。

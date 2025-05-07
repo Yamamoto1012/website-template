@@ -1,0 +1,26 @@
+---
+description: 
+globs: app/_components/**/*,app/_features/**/*
+alwaysApply: false
+---
+---
+description: Component styling, animation & naming standards
+globs:
+  - "src/components/**/*"
+  - "src/features/**/_components/**/*"
+alwaysApply: false
+---
+
+### スタイリング
+- **Tailwind CSS** を唯一のスタイル手段とする。`class` 直書きが基本、`twMerge` で結合可。
+- shadcn/ui をプリミティブとして利用し、必要に応じ `variant` 拡張でカスタマイズ。
+
+### アニメーション
+- GSAP のロジックは `src/components/animations` に共通化。
+
+### コンポーネント指針
+- デフォルトエクスポート禁止。`export const Button` など **名前付きエクスポート** を推奨。
+- Props は `interface`、オプショナル値には **必ずデフォルト値** を設定。
+- Storybook 用の `.stories.tsx` を同ディレクトリに置く。
+
+@button-template.tsx

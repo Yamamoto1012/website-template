@@ -1,0 +1,29 @@
+---
+description: 
+globs: app/hooks/**/*
+alwaysApply: false
+---
+---
+description: Custom React hooks patterns & side-effect boundaries
+globs:
+  - "src/hooks/**/*"
+alwaysApply: false
+---
+
+- フック名は `use` プレフィックスを必須とし、**React の ルール** を遵守。
+- **外部副作用**（localStorage, fetch, console.debug など）を含む場合、  
+  フック内部に閉じず `utils/**` に切り出した pure 関数に委譲。
+- 返却値は **配列よりオブジェクト** を原則とし、 必要に応じて `as const` で型を固定。
+- `useState` より `useReducer` / Zustand / Jotai を優先し、  
+  **再レンダリング数の最小化** をメトリクスで計測（React DevTools Profiler 推奨）。
+
+@example:
+```ts
+export const useDebouncedValue = <T>(value: T, delay = 300) => {
+  const [debounced, setDebounced] = useState(value);
+  useEffect(() => {
+    const id = setTimeout(() => setDebounced(value), delay);
+    return () => clearTimeout(id);
+  }, [value, delay]);
+  return { debounced };
+};

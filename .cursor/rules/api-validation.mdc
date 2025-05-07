@@ -1,0 +1,18 @@
+---
+description: 
+globs: app/api/**/*
+alwaysApply: false
+---
+---
+description: API route schema validation & typing
+globs:
+  - "src/app/api/**/*"
+alwaysApply: false
+---
+
+### ルール
+- すべてのエンドポイントは **zod** で Request/Response をスキーマ化。
+- 生成した型 (`z.infer`) を **単一の `types` モジュール** 経由で再利用。
+- エラーハンドリングは `@/utils/httpError.ts` のカスタムクラスを使用。
+
+@api-template.ts
