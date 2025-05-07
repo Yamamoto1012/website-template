@@ -6,7 +6,7 @@ alwaysApply: true
 ---
 description: Global TypeScript & Next.js (App Router) conventions
 globs:
-  - "src/**/*"
+  - "**/*"
 alwaysApply: true
 ---
 
@@ -25,7 +25,7 @@ alwaysApply: true
    - camelCase: 変数 / 関数  
    - `useXxx`: カスタムフック
 3. **コメント**  
-   “**なぜ**” に焦点を当てた JSDoc。処理内容だけのコメントは禁止。
+   "**なぜ**" に焦点を当てた JSDoc。処理内容だけのコメントは禁止。
 4. **文字列**  
    テンプレートリテラルを必須。連結演算子は使用しない。
 

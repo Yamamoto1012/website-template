@@ -1,12 +1,12 @@
 ---
 description: 
-globs: app/api/**/*
+globs: /api/**/*,*.ts
 alwaysApply: false
 ---
 ---
 description: API route schema validation & typing
 globs:
-  - "src/app/api/**/*"
+  - "api/**/*"
 alwaysApply: false
 ---
 

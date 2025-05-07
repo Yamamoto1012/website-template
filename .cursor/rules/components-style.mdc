@@ -1,13 +1,13 @@
 ---
 description: 
-globs: app/_components/**/*,app/_features/**/*
+globs: components/**/*,*.tsx
 alwaysApply: false
 ---
 ---
 description: Component styling, animation & naming standards
 globs:
-  - "src/components/**/*"
-  - "src/features/**/_components/**/*"
+  - "components/**/*"
+  - "features/**/*"
 alwaysApply: false
 ---
 

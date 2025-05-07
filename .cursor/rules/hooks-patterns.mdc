@@ -1,12 +1,12 @@
 ---
 description: 
-globs: app/hooks/**/*
+globs: hooks/**/*,*.ts
 alwaysApply: false
 ---
 ---
 description: Custom React hooks patterns & side-effect boundaries
 globs:
-  - "src/hooks/**/*"
+  - "hooks/**/*"
 alwaysApply: false
 ---
 
@@ -27,3 +27,6 @@ export const useDebouncedValue = <T>(value: T, delay = 300) => {
   }, [value, delay]);
   return { debounced };
 };
+```
+
+### フックパターン
