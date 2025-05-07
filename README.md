@@ -1,17 +1,17 @@
 # Website Template for Next.js
 
-Next.js 15（App Router）と TypeScript をベースに、Tailwind CSS と shadcn/ui を組み合わせたすぐに使えるウェブサイトテンプレートです。
+Next.js 15（App Router）と TypeScript をベースに、Tailwind CSS と shadcn/ui を組み合わせたすぐに使えるウェブサイトテンプレート。
 
 ## 主な特徴
 
-* **Next.js 15（App Router）** で高速なページ遷移
-* **TypeScript** による型安全な開発
-* **Tailwind CSS + shadcn/ui** で柔軟かつ再利用可能な UI
-* **pnpm** で高速かつ軽量な依存管理
-* **Storybook** でコンポーネントを視覚的に確認
-* **GSAP** アニメーションで動きに表情をプラス
-* **Biome** による自動フォーマットと静的解析
-* **Husky** でコミット前にコード品質チェック
+* **Next.js 15（App Router）**
+* **TypeScript**
+* **Tailwind CSS + shadcn/ui**
+* **pnpm**
+* **Storybook**
+* **GSAP**
+* **Biome**
+* **Husky**
 
 ## 開発環境の準備
 
@@ -56,15 +56,14 @@ Next.js 15（App Router）と TypeScript をベースに、Tailwind CSS と shad
 
 ## スタイリングとアニメーション
 
-* **Tailwind CSS** によるユーティリティファーストなスタイル
-* **shadcn/ui** で一貫性のある UI コンポーネント
-* **GSAP** を使ったリッチなアニメーション
+* **Tailwind CSS**
+* **shadcn/ui**
+* **GSAP**
 
 ## コード品質
 
 * **Biome** で自動フォーマット＆Lint
 * **Husky** でコミット前に品質チェック
-* **TypeScript** で安心の型検査
 
 ## ドキュメント
 
