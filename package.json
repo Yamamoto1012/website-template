@@ -12,7 +12,12 @@
 		"lint:fix": "biome lint --apply",
 		"format:fix": "biome format --write",
 		"check:fix": "biome check --apply",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,ts,tsx,json,md}": ["biome format --write"]
 	},
 	"dependencies": {
 		"@gsap/react": "^2.1.2",
@@ -29,15 +34,28 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@eslint/eslintrc": "^3",
+		"@storybook/addon-essentials": "^8.6.12",
+		"@storybook/addon-interactions": "^8.6.12",
+		"@storybook/addon-onboarding": "^8.6.12",
+		"@storybook/blocks": "^8.6.12",
+		"@storybook/nextjs": "^8.6.12",
+		"@storybook/react": "^8.6.12",
+		"@storybook/test": "^8.6.12",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"eslint": "^9",
 		"eslint-config-next": "15.3.2",
+		"eslint-plugin-storybook": "^0.12.0",
 		"husky": "^8.0.0",
+		"lint-staged": "^15.5.2",
+		"storybook": "^8.6.12",
 		"tailwindcss": "^4",
 		"tw-animate-css": "^1.2.9",
 		"typescript": "^5"
+	},
+	"eslintConfig": {
+		"extends": ["plugin:storybook/recommended"]
 	}
 }
